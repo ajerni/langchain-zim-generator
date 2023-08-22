@@ -13,6 +13,14 @@ It takes the whole zimdocs.txt file (thanks to Dr. Abstract - https://zimjs.com/
 6. Create a .env file containing your OpenAI Key: `echo "OPENAI_API_KEY=xyz" > .env` (replace xyz with your own OpenAI Key)
 7. In main.py line 19 change the query string to whatever you want (use Zim terms circle, label, etc.) like: `3 circles within eachother. Biggest red, middle green, smallest black`
 8. Run it: `python main.py` or `python3 main.py`
+9. Copy and paste the output into your own `index.html` - open it as your usual ZIM file!
+10. Fork my repo and start developing until we have the ultimate ZIM-Auto-Pilot 🚀
+
+## Credits
+
+- Dr. Abstract for his amazing ZIM docs: https://zimjs.com/docs.html
+- <NAME> for his amazing langchain: https://github.com/kpe/langchain
+- OpenAI for their amazing
 
 ## To-Dos:
 
