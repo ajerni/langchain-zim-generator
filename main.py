@@ -16,7 +16,7 @@ load_dotenv()
 
 os.environ['OPENAI_API_KEY'] = os.environ.get('OPENAI_API_KEY')
 
-query = "a blue circle in the top left of the screen"
+query = "a blue circle and above it a label with the text 'it works'"
 #query = "3 circles within eachother. Biggest red, middle green, smallest black"
 #query = "an input text field with a label 'enter your name' beside each other"
 
