@@ -7,7 +7,7 @@ It takes the whole zimdocs.txt file (thanks to Dr. Abstract - https://zimjs.com/
 
 1. Git Clone: `git clone https://github.com/ajerni/langchain-zim-generator.git`
 2. Move to the new directory: `cd langchain-zim-generator`
-3. Create Virtual Environment: `python -m venv env` or `python3 -m venv env`
+3. Create Virtual Environment: `python -m venv env` or `python3 -m venv env` (on Windows: `python -m venv c:\path\to\env`)
 4. Activate Virtual Environment: `source env/bin/activate` on Mac or `env\Scripts\activate` on Windows
 5. Install Dependencies: `pip install -r requirements.txt`
 6. Create a .env file containing your OpenAI Key: `echo "OPENAI_API_KEY=xyz" > .env` (replace xyz with your own OpenAI Key)
