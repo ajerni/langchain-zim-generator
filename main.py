@@ -16,7 +16,8 @@ load_dotenv()
 
 os.environ['OPENAI_API_KEY'] = os.environ.get('OPENAI_API_KEY')
 
-query = "3 circles within eachother. Biggest red, middle green, smallest black"
+query = "a blue circle in the top left of the screen"
+#query = "3 circles within eachother. Biggest red, middle green, smallest black"
 #query = "an input text field with a label 'enter your name' beside each other"
 
 loader = TextLoader("zimdocs.txt")
