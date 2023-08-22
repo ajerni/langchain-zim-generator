@@ -18,9 +18,7 @@ It takes the whole zimdocs.txt file (thanks to Dr. Abstract - https://zimjs.com/
 
 ## Credits
 
-- Dr. Abstract for his amazing ZIM docs: https://zimjs.com/docs.html
-- <NAME> for his amazing langchain: https://github.com/kpe/langchain
-- OpenAI for their amazing
+- Dr. Abstract for his amazing ZIM: https://zimjs.com
 
 ## To-Dos:
 
