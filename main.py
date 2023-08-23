@@ -39,12 +39,17 @@ with st.sidebar:
 
 def main():
     #query = "a blue circle and above it a label with the text 'it works'"
-    #query = "3 circles within eachother. Biggest red, middle green, smallest black"
+    #query = "3 circles within each other. Biggest red, middle green, smallest black"
     #query = "an input text field with a label 'enter your name' beside each other"
     st.header("ZIM code generator")
-    st.write("Enter what you want the AI to create - use ZIM terms like circle, rectangle, ... [ZIM Docs](https://zimjs.com/docs.html)")
-    st.write("If for example 'a red circle with 50px radius' gives not the desired result, be more precise like 'a red circle with 50px radius. Center it on the stage.' Play with your prompts!")
-    query = st.text_input('Examples: A blue circle within a white circle / a label with the text "Enter your name:" followed by a textinput field - etc.')
+    st.write("Use ZIM terms like circle, rectangle, ... see [ZIM Docs](https://zimjs.com/docs.html)")
+    st.markdown('''
+                Examples:
+                - a text label showing the text "Hello"
+                - 3 circles within each other. Biggest red, middle green, smallest black
+                - an input text field with a label "enter your name" beside each other
+                ''')
+    query = st.text_input('Enter what you want the AI to build:')
 
     if query:
         results = cenerateZIMcode(query)
