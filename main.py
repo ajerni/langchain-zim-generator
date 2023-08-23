@@ -16,12 +16,7 @@ from langchain.document_loaders import TextLoader
 from dotenv import load_dotenv
 load_dotenv()
 
-# os.environ['OPENAI_API_KEY'] = os.environ.get('OPENAI_API_KEY') - use this for local development with a .env file
-
-ss = st.session_state
-
 def on_api_key_change():
-    api_key = ss.get('api_key') or os.getenv('OPENAI_API_KEY')
     os.environ['OPENAI_API_KEY'] = api_key
 
 with st.sidebar:
@@ -34,13 +29,10 @@ with st.sidebar:
     ### The app needs a valid OpenAI Key to work. Get your own on [OpenAI](https://platform.openai.com/account/api-keys)
     ''')
     
-    # st.text_input('OpenAI API key', type='password', key='api_key', on_change=on_api_key_change, label_visibility="collapsed")
-    st.text_input('OpenAI API key', type='password', key='api_key', on_change=on_api_key_change)
+    api_key = st.text_input('OpenAI API key', type='password', key='api_key', on_change=on_api_key_change)
 
 def main():
-    #query = "a blue circle and above it a label with the text 'it works'"
-    #query = "3 circles within each other. Biggest red, middle green, smallest black"
-    #query = "an input text field with a label 'enter your name' beside each other"
+
     st.header("ZIM code generator")
     st.write("Use ZIM terms like circle, rectangle, ... see [ZIM Docs](https://zimjs.com/docs.html)")
     st.markdown('''
