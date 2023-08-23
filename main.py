@@ -45,14 +45,14 @@ def main():
     if query:
         if api_key:
             os.environ['OPENAI_API_KEY'] = api_key
-            results = cenerateZIMcode(query)
+            results = generateZIMcode(query)
             st.code(results, language='html')
             components.html(results, width=512, height=384)
             os.environ['OPENAI_API_KEY'] = ""
         else:
             st.error("Please enter a valid OpenAI API key")
 
-def cenerateZIMcode(query):
+def generateZIMcode(query):
     loader = TextLoader("zimdocs.txt")
     documents = loader.load()
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
