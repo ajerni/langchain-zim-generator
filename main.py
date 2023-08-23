@@ -39,6 +39,7 @@ def main():
                 - an input text field with a label "enter your name" beside each other
                 - a green circle centered on the stage and moved by 200px to the right
                 - use circles and rectangles to build something that looks like an apple
+                - use an emitter to create an animation of a firework
                 ''')
     query = st.text_input('Enter what you want the AI to build:')
 
