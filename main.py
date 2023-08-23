@@ -16,7 +16,7 @@ from langchain.document_loaders import TextLoader
 from dotenv import load_dotenv
 load_dotenv()
 
-os.environ['OPENAI_API_KEY'] = os.environ.get('OPENAI_API_KEY')
+# os.environ['OPENAI_API_KEY'] = os.environ.get('OPENAI_API_KEY') - use this for local development with a .env file
 
 ss = st.session_state
 

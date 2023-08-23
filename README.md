@@ -5,9 +5,11 @@ It takes the whole zimdocs.txt file (thanks to Dr. Abstract - https://zimjs.com/
 
 ## Demo
 
-todo: link to streamlit app
+Try it live here:
 
-## How to Use
+https://zim-generator.streamlit.app/
+
+## How to install for local development:
 
 1. Install Python 3.10 on your machine and use a bash terminal (maybe within Visual Studio Code)
 2. Git Clone: `git clone https://github.com/ajerni/langchain-zim-generator.git`
