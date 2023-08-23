@@ -16,12 +16,6 @@ from langchain.document_loaders import TextLoader
 from dotenv import load_dotenv
 load_dotenv()
 
-ss = st.session_state
-
-def on_api_key_change():
-    api_key = ss.get('api_key') or os.getenv('OPENAI_API_KEY')
-    os.environ['OPENAI_API_KEY'] = api_key
-
 with st.sidebar:
     st.title('langchain-zim-generator')
     st.markdown('''
@@ -32,13 +26,10 @@ with st.sidebar:
     ### The app needs a valid OpenAI Key to work. Get your own on [OpenAI](https://platform.openai.com/account/api-keys)
     ''')
     
-    st.text_input('OpenAI API key', type='password', key='api_key', on_change=on_api_key_change)
+    api_key = st.text_input('OpenAI API key', type='password')
 
 def main():
-    # Delete existing session state - do not remove this line from main() for security reasons
-    if ss['api_key']:
-        del ss['api_key']
-
+    
     st.header("ZIM code generator")
     st.write("Use ZIM terms like circle, rectangle, ... see [ZIM Docs](https://zimjs.com/docs.html)")
     st.markdown('''
@@ -46,13 +37,19 @@ def main():
                 - a text label showing the text "Hello"
                 - 3 circles within each other. Biggest red, middle green, smallest black
                 - an input text field with a label "enter your name" beside each other
+                - a green circle centered on the stage and moved by 200px to the right
                 ''')
     query = st.text_input('Enter what you want the AI to build:')
 
     if query:
-        results = cenerateZIMcode(query)
-        st.code(results, language='html')
-        components.html(results, width=512, height=384)
+        if api_key:
+            os.environ['OPENAI_API_KEY'] = api_key
+            results = cenerateZIMcode(query)
+            st.code(results, language='html')
+            components.html(results, width=512, height=384)
+            os.environ['OPENAI_API_KEY'] = ""
+        else:
+            st.error("Please enter a valid OpenAI API key")
 
 def cenerateZIMcode(query):
     loader = TextLoader("zimdocs.txt")
