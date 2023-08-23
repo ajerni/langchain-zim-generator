@@ -1,4 +1,5 @@
 env
 .env
+.env_hide
 __pycache__
 
