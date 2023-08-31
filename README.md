@@ -21,8 +21,8 @@ Please note that the use of OpenAI embeddings seems to work with OpenAI Keys fro
 
 Try it live here:
 
-In-Memory Version: https://zim-generator.streamlit.app/
-Hosted Version: https://langchain-zim-generator-pinecone.streamlit.app/
+In-Memory Version: https://zim-generator-dev.streamlit.app/
+Hosted Version: https://zim-generator.streamlit.app/
 
 ## How to install for local development:
 
