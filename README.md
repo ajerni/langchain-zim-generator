@@ -4,11 +4,12 @@ This python script uses langchain and OpenAI to create an index.html file contai
 It takes the whole zimdocs.txt file (thanks to Dr. Abstract - https://zimjs.com/docs.html), splits it into smaller pieces that are embedded in a vectorsore. The query is placed in the same vectorstore and returns similar chunks from the documentation, from which a ZIM code is generated using some very clever 😉 prompt engineering.
 
 This version uses an in-memory vectorstore (FAISS) and recreates the embeddings every time it runs.
-That is why this versioin only works with OpenAI keys from payed plans.
 
 Here is a version where the vectorstore is already created and hosted at pinecone:
 
 https://github.com/ajerni/langchain-zim-generator-pinecone
+
+Please note that the use of OpenAI embeddings seems to work with OpenAI Keys from payed plans only.
 
 ## Examples
 
